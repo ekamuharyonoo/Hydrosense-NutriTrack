@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1600" height="1000" fill="#f7faf8"/>
+  <text x="40" y="58" font-size="34" font-weight="700" fill="#043324">HydroSense Lite — Diagram Wiring (2 board)</text>
+  <text x="40" y="92" font-size="18" fill="#4a6357">ESP32-C3 SuperMini = monitoring + MQTT · ESP32 DevKit = kontrol relay · keduanya terhubung ESP-NOW (tanpa kabel)</text>
+
+  <!-- ===== UNIT MONITORING ===== -->
+  <text x="40" y="150" font-size="20" font-weight="700" fill="#2aae80">① UNIT MONITORING</text>
+
+  <!-- DS18B20 -->
+  <rect x="40" y="180" width="300" height="180" rx="14" fill="#fff" stroke="#2aae80" stroke-width="3"/>
+  <text x="60" y="216" font-size="21" font-weight="700" fill="#043324">DS18B20 (waterproof)</text>
+  <text x="60" y="242" font-size="15" fill="#4a6357">Sensor suhu air</text>
+  <g font-size="16" fill="#043324">
+    <circle cx="340" cy="280" r="7" fill="#eb5757"/><text x="322" y="286" text-anchor="end">VCC (merah)</text>
+    <circle cx="340" cy="310" r="7" fill="#333"/><text x="322" y="316" text-anchor="end">GND (hitam)</text>
+    <circle cx="340" cy="340" r="7" fill="#f2c94c"/><text x="322" y="346" text-anchor="end">DATA (kuning)</text>
+  </g>
+  <rect x="385" y="362" width="66" height="22" rx="4" fill="#e8d3a9" stroke="#8a6d3b"/>
+  <text x="418" y="406" font-size="14" text-anchor="middle" fill="#8a6d3b" font-weight="700">4,7 kΩ pull-up</text>
+
+  <!-- TDS -->
+  <rect x="40" y="560" width="300" height="190" rx="14" fill="#fff" stroke="#2f80ed" stroke-width="3"/>
+  <text x="60" y="596" font-size="21" font-weight="700" fill="#043324">Gravity TDS Meter</text>
+  <text x="60" y="622" font-size="15" fill="#4a6357">Board + probe (celup di tandon)</text>
+  <g font-size="16" fill="#043324">
+    <circle cx="340" cy="660" r="7" fill="#eb5757"/><text x="322" y="666" text-anchor="end">+ (VCC)</text>
+    <circle cx="340" cy="690" r="7" fill="#333"/><text x="322" y="696" text-anchor="end">− (GND)</text>
+    <circle cx="340" cy="720" r="7" fill="#56ccf2"/><text x="322" y="726" text-anchor="end">A (analog)</text>
+  </g>
+
+  <!-- C3 -->
+  <rect x="540" y="300" width="240" height="380" rx="18" fill="#1d2b36"/>
+  <rect x="600" y="322" width="120" height="56" rx="6" fill="#c9d1d6"/>
+  <text x="660" y="357" font-size="17" text-anchor="middle" fill="#1d2b36" font-weight="700">ESP32-C3</text>
+  <text x="660" y="400" font-size="15" text-anchor="middle" fill="#cfd8dc">SuperMini</text>
+  <g font-size="16" fill="#fff">
+    <circle cx="540" cy="450" r="8" fill="#f2c94c"/><text x="560" y="456">3V3</text>
+    <circle cx="540" cy="500" r="8" fill="#333"/><text x="560" y="506">GND</text>
+    <circle cx="540" cy="550" r="8" fill="#6fcf97"/><text x="560" y="556">GPIO1</text>
+    <circle cx="540" cy="600" r="8" fill="#56ccf2"/><text x="560" y="606">GPIO0 (ADC1)</text>
+  </g>
+  <rect x="625" y="648" width="70" height="32" rx="4" fill="#9aa4aa"/><text x="660" y="670" font-size="13" text-anchor="middle" fill="#1d2b36">USB-C</text>
+  <rect x="510" y="780" width="300" height="70" rx="12" fill="#fff3e0" stroke="#f2994a" stroke-width="2"/>
+  <text x="660" y="811" font-size="16" text-anchor="middle" font-weight="700" fill="#7a4b12">Adaptor 5V / powerbank</text>
+  <text x="660" y="833" font-size="14" text-anchor="middle" fill="#7a4b12">ke USB-C SuperMini</text>
+
+  <!-- wires monitoring -->
+  <g fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M347 280 H470 V450 H532" stroke="#eb5757"/>
+    <path d="M347 310 H455 V500 H532" stroke="#333"/>
+    <path d="M347 340 H370 V550 H532" stroke="#f2c94c"/>
+    <path d="M370 373 H385" stroke="#8a6d3b" stroke-width="3"/><path d="M451 373 H470" stroke="#8a6d3b" stroke-width="3"/>
+    <path d="M347 660 H490 V450" stroke="#eb5757"/>
+    <path d="M347 690 H505 V500" stroke="#333"/>
+    <path d="M347 720 H520 V600 H532" stroke="#56ccf2"/>
+    <path d="M660 780 V680" stroke="#f2994a"/>
+  </g>
+  <circle cx="370" cy="373" r="5" fill="#8a6d3b"/><circle cx="470" cy="373" r="5" fill="#8a6d3b"/>
+
+  <!-- ESP-NOW -->
+  <g fill="none" stroke="#2aae80" stroke-width="3">
+    <path d="M800 470 q30 -30 60 0" /><path d="M790 455 q40 -50 80 0" /><path d="M780 440 q50 -70 100 0" />
+    <path d="M940 470 q30 -30 60 0" /><path d="M930 455 q40 -50 80 0" /><path d="M920 440 q50 -70 100 0" />
+  </g>
+  <text x="900" y="520" font-size="20" font-weight="700" text-anchor="middle" fill="#2aae80">ESP-NOW</text>
+  <text x="900" y="545" font-size="14" text-anchor="middle" fill="#4a6357">nirkabel, terenkripsi</text>
+  <text x="900" y="566" font-size="14" text-anchor="middle" fill="#4a6357">sensor → · ← status pompa</text>
+
+  <!-- ===== UNIT KONTROL ===== -->
+  <text x="1040" y="150" font-size="20" font-weight="700" fill="#bb6bd9">② UNIT KONTROL</text>
+  <rect x="1040" y="180" width="240" height="380" rx="18" fill="#1d2b36"/>
+  <rect x="1100" y="202" width="120" height="56" rx="6" fill="#c9d1d6"/>
+  <text x="1160" y="237" font-size="17" text-anchor="middle" fill="#1d2b36" font-weight="700">ESP32</text>
+  <text x="1160" y="280" font-size="15" text-anchor="middle" fill="#cfd8dc">DevKit V1</text>
+  <g font-size="16" fill="#fff" text-anchor="end">
+    <circle cx="1280" cy="330" r="8" fill="#eb5757"/><text x="1262" y="336">VIN (5V)</text>
+    <circle cx="1280" cy="380" r="8" fill="#333"/><text x="1262" y="386">GND</text>
+    <circle cx="1280" cy="430" r="8" fill="#bb6bd9"/><text x="1262" y="436">GPIO25</text>
+    <circle cx="1280" cy="480" r="8" fill="#f2994a"/><text x="1262" y="486">GPIO26</text>
+    <circle cx="1280" cy="515" r="8" fill="#27ae60"/><text x="1262" y="521">GPIO13</text>
+  </g>
+  <rect x="1125" y="528" width="70" height="32" rx="4" fill="#9aa4aa"/><text x="1160" y="550" font-size="13" text-anchor="middle" fill="#1d2b36">USB</text>
+  <rect x="1010" y="630" width="300" height="70" rx="12" fill="#fff3e0" stroke="#f2994a" stroke-width="2"/>
+  <text x="1160" y="661" font-size="16" text-anchor="middle" font-weight="700" fill="#7a4b12">Adaptor 5V</text>
+  <text x="1160" y="683" font-size="14" text-anchor="middle" fill="#7a4b12">ke USB ESP32</text>
+
+  <!-- Relay -->
+  <rect x="1350" y="290" width="220" height="230" rx="14" fill="#fff" stroke="#bb6bd9" stroke-width="3"/>
+  <text x="1365" y="325" font-size="19" font-weight="700" fill="#043324">Relay 2 Channel</text>
+  <text x="1365" y="347" font-size="14" fill="#4a6357">5V, aktif LOW</text>
+  <g font-size="15" fill="#043324">
+    <circle cx="1350" cy="330" r="0" fill="none"/>
+    <circle cx="1350" cy="380" r="7" fill="#eb5757"/><text x="1365" y="385">VCC</text>
+    <circle cx="1350" cy="410" r="7" fill="#333"/><text x="1365" y="415">GND</text>
+    <circle cx="1350" cy="440" r="7" fill="#bb6bd9"/><text x="1365" y="445">IN1</text>
+    <circle cx="1350" cy="480" r="7" fill="#f2994a"/><text x="1365" y="485">IN2</text>
+  </g>
+  <rect x="1480" y="420" width="70" height="40" rx="6" fill="#2f80ed"/><text x="1515" y="446" font-size="14" fill="#fff" text-anchor="middle">K1</text>
+  <rect x="1480" y="468" width="70" height="40" rx="6" fill="#2f80ed"/><text x="1515" y="494" font-size="14" fill="#fff" text-anchor="middle">K2</text>
+  <g fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1288 330 H1315 V380 H1343" stroke="#eb5757"/>
+    <path d="M1288 380 H1305 V410 H1343" stroke="#333"/>
+    <path d="M1288 430 H1300 V440 H1343" stroke="#bb6bd9"/>
+    <path d="M1288 480 H1343" stroke="#f2994a"/>
+    <path d="M1160 630 V560" stroke="#f2994a"/>
+  </g>
+
+  <!-- LED status -->
+  <g font-size="16" fill="#fff">
+    <circle cx="1040" cy="500" r="8" fill="#27ae60"/><text x="1058" y="506">GPIO18</text>
+    <circle cx="1040" cy="535" r="8" fill="#eb5757"/><text x="1058" y="541">GPIO19</text>
+  </g>
+  <rect x="820" y="610" width="160" height="112" rx="12" fill="#fff" stroke="#4a6357" stroke-width="2"/>
+  <text x="900" y="634" font-size="15" font-weight="700" text-anchor="middle" fill="#043324">LED status</text>
+  <circle cx="845" cy="655" r="9" fill="#27ae60"/><text x="862" y="660" font-size="13" fill="#043324">Hijau: online</text>
+  <circle cx="845" cy="690" r="9" fill="#eb5757"/><text x="862" y="695" font-size="13" fill="#043324">Merah: error</text>
+  <text x="900" y="715" font-size="11" text-anchor="middle" fill="#4a6357">330 Ω → GND</text>
+  <g fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1032 500 H995 V655 H980" stroke="#27ae60"/>
+    <path d="M1032 535 H1005 V690 H980" stroke="#eb5757"/>
+  </g>
+
+  <!-- Buzzer -->
+  <rect x="1040" y="730" width="260" height="78" rx="12" fill="#fff" stroke="#27ae60" stroke-width="3"/>
+  <circle cx="1080" cy="769" r="22" fill="#1d2b36"/><circle cx="1080" cy="769" r="6" fill="#555"/>
+  <text x="1115" y="762" font-size="17" font-weight="700" fill="#043324">Buzzer aktif</text>
+  <text x="1115" y="784" font-size="13" fill="#4a6357">+ → GPIO13 · − → GND</text>
+  <text x="1115" y="800" font-size="12" fill="#4a6357">bip tiap data C3 masuk</text>
+  <path d="M1288 515 H1325 V718 H1250 V730" fill="none" stroke="#27ae60" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- pumps -->
+  <rect x="1340" y="590" width="110" height="74" rx="12" fill="#e8f7ee" stroke="#2aae80" stroke-width="2"/>
+  <text x="1395" y="622" font-size="16" text-anchor="middle" font-weight="700" fill="#043324">Pompa A</text>
+  <text x="1395" y="644" font-size="13" text-anchor="middle" fill="#4a6357">12V</text>
+  <rect x="1465" y="590" width="110" height="74" rx="12" fill="#e8f7ee" stroke="#2aae80" stroke-width="2"/>
+  <text x="1520" y="622" font-size="16" text-anchor="middle" font-weight="700" fill="#043324">Pompa B</text>
+  <text x="1520" y="644" font-size="13" text-anchor="middle" fill="#4a6357">12V</text>
+  <rect x="1340" y="730" width="235" height="80" rx="12" fill="#fff3e0" stroke="#f2994a" stroke-width="2"/>
+  <text x="1457" y="762" font-size="16" text-anchor="middle" font-weight="700" fill="#7a4b12">Adaptor 12V (pompa)</text>
+  <text x="1457" y="784" font-size="12" text-anchor="middle" fill="#7a4b12">+12V → COM K1 &amp; K2</text>
+  <text x="1457" y="800" font-size="12" text-anchor="middle" fill="#7a4b12">NO → (+) pompa · (−) → GND 12V</text>
+  <g fill="none" stroke="#2aae80" stroke-width="4" stroke-dasharray="10 7" stroke-linecap="round">
+    <path d="M1550 440 H1585 V560 H1395 V590"/>
+    <path d="M1550 488 H1575 V575 H1520 V590"/>
+  </g>
+  <path d="M1575 770 H1592 V440" fill="none" stroke="#f2994a" stroke-width="4" stroke-dasharray="10 7"/>
+
+  <!-- notes -->
+  <g font-size="15" fill="#043324">
+    <text x="40" y="880" font-weight="700" font-size="17">Catatan</text>
+    <text x="40" y="906">• C3: TDS wajib di GPIO 0–4 (ADC1); hindari GPIO 2, 8, 9 (pin boot). DS18B20 butuh 4,7 kΩ DATA→3V3.</text>
+    <text x="40" y="930">• Kedua board tidak perlu kabel data: komunikasi lewat ESP-NOW. Jarak uji ≤ 10 m dalam ruangan.</text>
+    <text x="40" y="954">• Garis putus-putus = jalur 12V pompa (jangan ke pin ESP). GND relay disatukan dengan GND ESP32.</text>
+    <text x="40" y="978">• Pasang dioda flyback (1N4007/1N5819) paralel di tiap pompa DC (katoda ke +) dan pisahkan adaptor pompa dari ESP32 — tanpa ini ESP32 bisa hang saat pompa menyala.</text>
+  </g>
+</svg>

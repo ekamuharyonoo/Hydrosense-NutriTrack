@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#043324">
+<title>HydroSense — Offline</title>
+<style>
+  html, body { margin: 0; height: 100%; }
+  body {
+    display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box;
+    background: linear-gradient(160deg, #08512d, #02251d); color: #ece9f5;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif; text-align: center;
+  }
+  .box { max-width: 340px; }
+  img { width: 72px; height: 72px; border-radius: 18px; }
+  h1 { font-size: 20px; margin: 18px 0 8px; }
+  p { color: #b4cbbf; font-size: 15px; line-height: 1.5; margin: 0 0 22px; }
+  button {
+    font: inherit; font-weight: 700; border: 0; border-radius: 999px; padding: 12px 26px;
+    background: #6bd686; color: #02251d; cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <div class="box">
+    <img src="/icons/icon-192.png" alt="">
+    <h1>Tidak ada koneksi internet</h1>
+    <p>HydroSense butuh internet untuk menampilkan data kebun. Perangkat di kebun tetap bekerja seperti biasa.</p>
+    <button type="button" onclick="location.reload()">Coba lagi</button>
+  </div>
+  <script>addEventListener('online', () => location.reload());</script>
+</body>
+</html>

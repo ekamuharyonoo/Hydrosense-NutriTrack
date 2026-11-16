@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"><rect width="600" height="400" fill="#1e5a2c"/><g transform="translate(225 40) scale(1.5)">
+  <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M50 6 C46 12 14 50 14 76 A36 36 0 0 0 86 76 C86 50 54 12 50 6 Z" stroke-width="5"/>
+    <path d="M38 36 A17 17 0 0 1 62 36" stroke-width="4.5"/>
+    <path d="M43 42 A10 10 0 0 1 57 42" stroke-width="4.5"/>
+    <path d="M45.5 49 H54.5 M50 49 V54" stroke-width="4"/>
+    <path d="M50 86 V104" stroke-width="5"/>
+  </g>
+  <path d="M48 88 C48 73 41 63 26 60 C24 77 32 89 48 90 Z M45.2 84.1 L33.2 69.1 L30.8 70.9 L42.8 85.9 Z M52 88 C52 73 59 63 74 60 C76 77 68 89 52 90 Z M54.8 84.1 L66.8 69.1 L69.2 70.9 L57.2 85.9 Z" fill="#fff" fill-rule="evenodd"/>
+
+</g><text x="300" y="300" font-family="Helvetica, Arial" font-weight="700" font-size="52" fill="#fff" text-anchor="middle">HydroSense</text></svg>

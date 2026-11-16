@@ -1,0 +1,11 @@
+.DS_Store
+node_modules/
+.next/
+out/
+.env*.local
+web/data/
+web/Archive.zip
+web/ADMIN-PASSWORD-SEMENTARA.txt
+docs/labels/
+docs/pitch/*.pptx
+*.pptx
